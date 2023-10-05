@@ -1,0 +1,164 @@
+body {
+  background-color: #333d48;
+}
+.Analog_head {
+  margin-top: 100px;
+  color: red;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid red;
+  font-size: 24px;
+  color: #444;
+  text-align: center;
+  background-color: white;
+}
+
+.clock::after {
+  background: #ff0000;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+}
+
+.hour_hand {
+  position: absolute;
+  width: 6px;
+  height: 92px;
+  background: #222;
+  top: 32%;
+  left: 49%;
+  transform-origin: bottom;
+  border-radius: 50%;
+}
+
+.min_hand {
+  position: absolute;
+  width: 6px;
+  height: 165px;
+  background: #444;
+  top: 16.5%;
+  left: 49.5%;
+  transform-origin: bottom;
+  border-radius: 50%;
+}
+
+.sec_hand {
+  position: absolute;
+  width: 3px;
+  height: 180px;
+  background: red;
+  top: 13.5%;
+  left: 50%;
+  transform-origin: bottom;
+  border-radius: 50%;
+}
+
+.clock span {
+  position: absolute;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  color: red;
+}
+
+.twelve {
+  top: 6px;
+  left: 47%;
+}
+
+.one {
+  top: 10%;
+  right: 22%;
+}
+
+.eleven {
+  top: 10%;
+  left: 22%;
+}
+
+.two {
+  top: 25%;
+  right: 8%;
+}
+
+.three {
+  right: 10px;
+  top: 46%;
+}
+
+.four {
+  right: 35px;
+  top: 67%;
+}
+
+.five {
+  right: 106px;
+  top: 84%;
+}
+
+.six {
+  bottom: 0px;
+  left: 50%;
+}
+
+.seven {
+  left: 75px;
+  top: 84%;
+  right: 68%;
+  bottom: 0px;
+}
+
+.eight {
+  left: 35px;
+  top: 67%;
+}
+
+.nine {
+  left: 10px;
+  top: 46%;
+}
+
+.ten {
+  top: 25%;
+  left: 8%;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 600px) {
+  .clock {
+    width: 300px;
+    height: 300px;
+    font-size: 16px;
+  }
+
+  .hour_hand {
+    height: 46px;
+  }
+
+  .min_hand {
+    height: 82.5px;
+  }
+
+  .sec_hand {
+    height: 90px;
+  }
+
+  .five {
+    right: 81px;
+    top: 84%;
+  }
+}
